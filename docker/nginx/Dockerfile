@@ -1,4 +1,4 @@
-FROM nginx:1.21.0
+FROM nginx:latest
 
 RUN groupadd -g 1000 app \
  && useradd -g 1000 -u 1000 -d /var/www -s /bin/bash app
