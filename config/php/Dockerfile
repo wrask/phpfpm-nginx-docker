@@ -1,4 +1,4 @@
-FROM php:8.0-fpm
+FROM php:8.1-fpm
 
 RUN pecl channel-update pecl.php.net \
   && pecl install xdebug \
@@ -7,7 +7,6 @@ RUN pecl channel-update pecl.php.net \
 
 COPY php.ini /usr/local/etc/php/
 
-VOLUME /var/www
 WORKDIR /var/www/html
 
 EXPOSE 9000
